@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body class="bg-gray-900 text-white flex h-screen overflow-hidden">
+    <header class="bg-purple h-screen p-4">
+      <ul class="uppercase font-bold h-full flex flex-col gap-4 pt-4 pl-4">
+        <li>Home</li>
+        <li>Albums</li>
+        <li>Songs</li>
+      </ul>
+    </header>
+    <main class="w-full bg-main">
+      <h2 class="font-bold text-xl p-4">Lista de canciones</h2>
+
+      <div class="pb-60 grid mx-auto justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl p-8 gap-10 h-full overflow-y-auto" id="track_list">
+      </div>
+
+      <div class="h-28 sticky bottom-0 w-full bg-slate-800">
+
+      </div>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
