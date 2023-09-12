@@ -20,9 +20,57 @@
       <div class="pb-60 grid mx-auto justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl p-8 gap-10 h-full overflow-y-auto" id="track_list">
       </div>
 
-      <div class="h-28 sticky bottom-0 w-full bg-gray-950">
+      <div class="h-28 sticky bottom-0 w-full bg-gray-950 flex justify-between" id="current-song">
+        <div class="h-full flex">
+          <div class="h-full w-auto">
+            <img 
+              src="" 
+              alt=""
+              class="h-full"
+              id="current-song-img"
+            >
+          </div>
+          <div class="flex flex-col h-full justify-center p-4">
+            <h4 class="font-semibold" id="current-song-title"></h4>
+            <p class="opacity-60 text-sm" id="current-song-author"></p>
+          </div>
+        </div>
 
+        <div class="p-4 flex gap-8">
+  
+          <button
+            id="current-song-prev"
+          >
+            <img 
+              src="/prev.svg" 
+              class="h-10"
+              alt=""
+            >
+          </button>
+          <button
+            id="current-song-play"
+          >
+            <img 
+              src="/pause.svg" 
+              class="h-10"
+              id="current-song-play-img"
+            >
+          </button>
+          <button
+            id="current-song-next"
+          >
+            <img 
+              src="/next.svg" 
+              class="h-10"
+              alt=""
+            >
+          </button>
+  
+        </div>
+
+        <audio src="/" id="current-song-audio" autoplay loop></audio>
       </div>
+
 
     </main>
     <footer>

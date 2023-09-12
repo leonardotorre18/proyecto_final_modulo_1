@@ -1,4 +1,5 @@
 import { CardSong } from './components/CardSong'
+import { reloadButtonPlay, setCurrentSong } from './components/CurrentSong'
 import { getData } from './services'
 import './style.css'
 
@@ -8,7 +9,10 @@ getData(data => {
   data.map(song => {
     track_list?.appendChild(CardSong({
       data: song,
-      eventPlay: () => console.log('Play'),
+      eventPlay: () => {
+        setCurrentSong(song)
+        reloadButtonPlay()
+      },
       eventLike: () => console.log('Like'),
     }))
 
