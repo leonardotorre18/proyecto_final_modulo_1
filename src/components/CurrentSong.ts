@@ -23,16 +23,20 @@ export const playCurrentSong = () => {
   const audio = document.getElementById('current-song-audio')
   const imgButtonPlay = document.getElementById('current-song-play-img')
 
-  if (audio?.paused) {
-    audio?.play()
-    imgButtonPlay.setAttribute('src', '/pause.svg')
-  } else {
-    audio?.pause()
-    imgButtonPlay.setAttribute('src', '/play.svg')
+  if (audio && audio instanceof HTMLAudioElement) {
+    if (audio.paused) {
+      audio?.play()
+      imgButtonPlay?.setAttribute('src', '/pause.svg')
+    } else {
+      audio?.pause()
+      imgButtonPlay?.setAttribute('src', '/play.svg')
+
+    }
   }
+
 }
 
 export const reloadButtonPlay = () => {
   const imgButtonPlay = document.getElementById('current-song-play-img')
-  imgButtonPlay.setAttribute('src', '/pause.svg')
+  imgButtonPlay?.setAttribute('src', '/pause.svg')
 }
