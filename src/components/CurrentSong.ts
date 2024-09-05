@@ -10,8 +10,8 @@ export const setCurrentSong = (song: TSong) => {
   
   title ? title.innerText = song.title : null
   author ? author.innerText = song.author : null
-  audio?.setAttribute('src', song.path.audio)
-  img?.setAttribute('src', song.path.front)
+  audio?.setAttribute('src', `https://api.institutoalfa.org/api/songs/audio/${song.audio.filename}`)
+  img?.setAttribute('src', `https://api.institutoalfa.org/api/songs/image/${song.image.filename}`)
 
 
   const buttonPlay = document.getElementById('current-song-play')

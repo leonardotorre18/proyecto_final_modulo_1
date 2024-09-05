@@ -17,7 +17,7 @@ export const CardSong = ({
   song.innerHTML = `
   <div class="h-52 w-full"></div>
   <div class="h-52 w-60 -top-3 -right-3 absolute">
-    <img class="object-cover w-full h-full" src="${data.path.front}" alt="">
+    <img class="object-cover w-full h-full" src="https://api.institutoalfa.org/api/songs/image/${data.image.filename}" alt="">
   </div>
   <div>
     <h4 class="font-semibold py-2">${data.title}</h4>
